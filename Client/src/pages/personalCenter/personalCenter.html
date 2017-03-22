@@ -1,0 +1,56 @@
+<div id="personCenter" ng-controller="personCenter">
+    <div class="main">
+        <h2>个人资料</h2>
+        <section class="basic">
+            <h3>基本信息</h3>
+            <form class="basicForm">
+                <ul>
+                    <li>
+                        <label>头像</label>
+                        <div class="inputbox">
+                            <div class="portrait-box" id="result">
+                                <img class="headpic" ng-src="{{imgUrl}}" />
+                                <p class="change" id="setPhoto"><span>修改</span>
+                                    <input type="file" name="file" ng-click="clearItems()" nv-file-select multiple uploader="uploader" id="inputFile"/>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="uname">用户名</label>
+                        <div class="inputbox" ng-init="isClick=false;isShow=true;">
+                            <span class="username" ng-show="!isClick">{{username}}</span>
+                            <input type="text" id="uname" ng-model="usernameNew" maxlength="30" ng-show="isClick">
+                            <span id="changeUsername" ng-show="isShow" ng-click="isClick=!isClick;isShow=!isShow">修改用户名</span>
+                            <div class="changeuser-btns" ng-show="isClick">
+                                <button class="confirm green-btn" id="usernameSubBtn" ng-click="isShow=!isShow;isClick=!isClick;username=usernameNew.length>0?usernameNew:username">确定</button>
+                                <button class="cancel cancel-btn" id="usernameCanBtn" ng-click="isShow=!isShow;isClick=!isClick;">取消</button>
+                            </div>
+                            <span class="ex-tips username-tips" id="usernameTips">用户名作为在网站内的昵称显示，只可修改一次</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="usex">性别</label>
+                        <div class="inputbox">
+                                <span class="select-box-sex">
+                                    <select id="usex" name="gender" ng-model="usex">
+                                        <option value="" selected="selected">保密</option>
+                                        <option value="男">男</option>
+                                        <option value="女">女</option>
+                                    </select>
+                                </span>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="basArea">个人简介</label>
+                        <div class="inputbox">
+                            <textarea id="basArea" ng-model="description" placeholder="一句话介绍一下自己吧，让别人更了解你" maxlength="200" name="description"></textarea>
+                            <p class="extra-tips">还可以输入 <span id="tipsNum">200</span> 字</p>
+                        </div>
+                    </li>
+                </ul>
+                <button type="submit" class="green-btn" ng-click="submit()">保存</button>
+            </form>
+        </section>
+    </div>
+</div>

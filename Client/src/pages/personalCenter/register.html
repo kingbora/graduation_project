@@ -1,0 +1,55 @@
+<div ng-controller="registerController">
+    <div class="kp-overlay"></div>
+    <div class="kp-dialog">
+        <div class="reg-view">
+            <div class="reg-header">
+                <div class="reg-title"><span class="reg-h3">注册帐号</span></div>
+            </div>
+            <div class="reg-section">
+                <div class="reg-section-bp">
+                    <div class="reg-section-tab">
+                        <div class="reg-tab-body">
+                            <div class="reg-tab-mobile">
+                                <div class="kp-input">
+                                    <input class="kp-input-mobile" ng-class="{'kp-input-err':err_tel === -1}" kng-check ng-model="phone" type="tel" name="phone" placeholder="请填写手机号" />
+                                    <i class="kp-input-icon kp-input-icon-tel"></i>
+                                    <span class="kp-err-tips">{{tel_err_info}}</span>
+                                    <span class="kp-flag kp-info-flag" ng-click="delVal('tel',this)" ng-class="{'kp-err-flag':err_tel === -1,'kp-right-flag':err_tel === 1,'kp-del-flag':err_tel === 0}"></span>
+                                </div>
+                                <div class="kp-input">
+                                    <div class="kp-input-half kp-hide">
+                                        <input class="kp-input-captcha" ng-class="{'kp-input-err':err_captcha === -1}" type="captcha" kng-check ng-model="captcha" placeholder="验证码" />
+                                        <i class="kp-input-icon kp-input-icon-captcha"></i>
+                                        <span class="kp-err-tips">{{captcha_err_info}}</span>
+                                        <span class="kp-flag kp-info-flag" ng-click="delVal('captcha',this)" ng-class="{'kp-err-flag':err_captcha === -1,'kp-right-flag':err_captcha === 1,'kp-del-flag':err_captcha === 0}"></span>
+                                    </div>
+                                    <span class="kp-captcha-pic">
+                                        <!--短信发送中 -- 60s后重新获取-->
+                                        <button class="kp-btn kp-btn-captcha" ng-click="send_code()" ng-disabled="send_code_state">{{send_code_msg}}</button>
+                                    </span>
+                                </div>
+                                <div class="kp-input">
+                                    <input class="kp-input-password" ng-class="{'kp-input-err':err_psw === -1}" kng-check ng-model="password" type="password" name="password" placeholder="设置密码(6~20位字符)" />
+                                    <i class="kp-input-icon kp-input-icon-psw"></i>
+                                    <span class="kp-err-tips">{{psw_err_info}}</span>
+                                    <span class="kp-flag kp-info-flag" ng-click="delVal('psw',this)" ng-class="{'kp-err-flag':err_psw === -1,'kp-right-flag':err_psw === 1,'kp-del-flag':err_psw === 0}"></span>
+                                    <p class="kp-password-scale" ng-class="{'scale-enough':scale===1,'scale-medium':scale===2,'scale-strong':scale===3,'scale-strong-enough':scale===4}">
+                                        <span class="kp-scale-bar"></span>
+                                        <span class="kp-scale-bar"></span>
+                                        <span class="kp-scale-bar"></span>
+                                        <span class="kp-scale-bar"></span>
+                                    </p>
+                                </div>
+                                <button type="button" class="kp-btn kp-btn-green" ng-click="submit()">{{btn_info}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reg-section-info">
+                        注册代表您已经阅读并同意<a href="#">《用户使用协议》</a>
+                    </div>
+                </div>
+                <div class="reg-three-part"></div>
+            </div>
+        </div>
+    </div>
+</div>

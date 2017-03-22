@@ -1,0 +1,13 @@
+<div class="content" ng-controller="photoWall" id="photoWall">
+    <div class="iw_wrapper">
+        <ul class="iw_thumbs" id="iw_thumbs">
+            <li ng-repeat="item in imageDatas">
+                <img ng-src="{{item.imageUrl}}" data-img="{{item.fullUrl}}" alt="图片加载失败"/>
+                <div>
+                    <h2>{{item.title}}</h2>
+                    <p>{{item.content}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

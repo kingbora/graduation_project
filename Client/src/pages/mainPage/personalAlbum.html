@@ -1,0 +1,152 @@
+<div ng-controller="mainController">
+    <div class="hd-white header-nav container">
+        <a href="#" class="hd-logo"></a>
+        <ul class="hd-nav">
+            <li class="current">
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">发现<i class="glyphicon glyphicon-chevron-down icon-down"></i></a>
+                <div class="hd-down-list">
+                    <ul style="display:none;">
+                        <li>
+                            <a href="#">旅游</a>
+                        </li>
+                        <li>
+                            <a href="#">亲子</a>
+                        </li>
+                        <li>
+                            <a href="#">美食</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    热门
+                    <em class="hd-new"></em>
+                </a>
+            </li>
+            <li>
+                <a href="#">我的相册</a>
+            </li>
+        </ul>
+        <div class="hd-right" ng-init="showSearch=false;">
+            <div class="hd-search" ng-class="{'on':showSearch}">
+                <form>
+                    <div class="hd-search-status">
+                        <div class="hd-search-filter">
+                            <a href="javascript:;">
+                                <span class="title">{{itemVal}}</span>
+                                <i class="glyphicon glyphicon-chevron-down icon-down"></i>
+                            </a>
+                            <ul class="hd-options">
+                                <li ng-class="{'on':item.selected}" ng-repeat="item in itemsVal">
+                                    <a href="#" ng-click="select(item)">{{item.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hd-search-select">
+                            <input type="text" class="hd-search-val" placeholder="请输入您要查找的内容" />
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="hd-search-btn" ng-click="showSearch = !showSearch">
+                        <i class="glyphicon glyphicon-search icon-search"></i>
+                    </a>
+                </form>
+            </div>
+            <div class="hd-login" ng-if="!isLogin">
+                <a href="" class="hd-login-btn" data-toggle="modal" data-target=".bs-login-modal-sm">
+                    <i class="glyphicon glyphicon-user"></i>
+                    登录
+                </a>
+            </div>
+            <div class="hd-logined" ng-if="isLogin">
+                <a href="#">
+                    <img src="../../images/user3.jpg">
+                    <span class="account-name">宁风浅</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hd-content">
+        <div class="hd-banner container">
+            <div class="hb-banner-info"></div>
+        </div>
+        <div class="hd-banner-show container">
+            <ul>
+                <li class="on">
+                    <a href="#">首页推荐</a>
+                </li>
+                <li>
+                    <a href="#">精品分享</a>
+                </li>
+                <li>
+                    <a href="#">最新相册</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hd-banner-list">
+            <kng-wrapper-page></kng-wrapper-page>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; 2017 kingbora development,All Rights Reserved</p>
+        <p>
+            <a href="#" title="Github">Github</a>
+            <a href="#" title="博客">Blog</a>
+        </p>
+    </div>
+    <div class="modal fade bs-login-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" ng-controller="loginController">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="myModalLabel">
+                        登&nbsp;&nbsp;陆
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <div id="hp-login-normal" data-hp-widgets="8" style="display: block;">
+                        <div class="hp-input hp-input-username">
+                            <input class="hp-username" name="username" ng-model="username" autocomplete="off" autocapitalize="off" autocorrect="off" data-enable-clean="true" data-rule-required="true" placeholder="手机/用户名/邮箱" data-hp-widgets="0">
+                            <span class="hp-err-tips">{{err_user}}</span>
+                        </div>
+                        <div class="hp-input">
+                            <input type="password" class="hp-password" name="password" ng-model="password" data-rule-required="true" maxlength="20" placeholder="密码" data-hp-widgets="1">
+                            <a class="hp-forgot" href="javascript:void(0);" data-bi-point="forgot_password">忘记密码?</a>
+                            <span class="hp-err-tips">{{err_psw}}</span>
+                        </div>
+                        <button class="hp-btn hp-btn-green" type="submit" data-bi-point="login_submit" ng-click="login()">登录</button>
+                        <p class="hp-register">
+                            没有账号?<a target="_self" href="#/register">新用户注册</a>
+                        </p>
+                        <div class="hp-third-login hp-third-gray hp-third-bottom">
+                            <span class="hp-hide">第三方登录</span>
+                            <div class="hp-list hp-cf">
+                                <a class="hp-wechat" target="_blank">
+                                    <p>
+                                        <span class="hp-icon hp-icon-weixin"></span>
+                                    </p>
+                                    <span class="hp-name">微信</span>
+                                </a>
+                                <a class="hp-qq" target="_blank">
+                                    <p>
+                                        <span class="hp-icon hp-icon-qq"></span>
+                                    </p>
+                                    <span class="hp-name">QQ</span>
+                                </a>
+                                <a class="hp-weibo" target="_blank">
+                                    <p>
+                                        <span class="hp-icon hp-icon-weibo"></span>
+                                    </p>
+                                    <span class="hp-name">微博</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/init.js"></script>

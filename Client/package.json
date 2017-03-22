@@ -1,0 +1,27 @@
+{
+  "name": "album",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "html-webpack-plugin": "^2.15.0",
+    "opn": "^3.0.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "run-sequence": "^1.1.5",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {}
+}
