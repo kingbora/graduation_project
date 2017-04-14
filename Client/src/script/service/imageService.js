@@ -4,6 +4,7 @@
 var imageService = ['$http', function($http) {
     var imageService =  {
         imageService: function(param) {
+            var options = { headers: { 'Authorization': localStorage.getItem("basicAuthHeaderValue")}};
             var promise = $http.get(param);
             return promise;
         }

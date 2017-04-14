@@ -1,12 +1,16 @@
 /**
  * Created by hand on 2016/11/25.
  */
-var loginService = ['$http','$log',function($http,$log){
+var loginService = ['$http','$window',function($http,$window){
     var loginService = {
         login: function(user) {
-            $log.debug(rootConfig.basePath + '/login');
-            var promise = $http.post(rootConfig.basePath + '/login?account='+user.account+"&password="+user.password);
+            var url = rootConfig.basePath + '/user/login';
+            var promise = $http.post(url, user);
             return promise;
+        },
+        updateUserInfo: function(param) {
+            var options = { headers: { 'Authorization': localStorage.getItem("basicAuthHeaderValue")}};
+            return  $http.post(rootConfig.basePath + '/user/updateUserInfo', param, options);
         }
     };
     return loginService;

@@ -1,0 +1,23 @@
+<div class="grid">
+    <div class="grid-i data-block">
+        <div class="imgholder" kng-scroll-photo="1">
+            <img class="imgStyle" ng-src="{{card.imgUrl}}"/>
+        </div>
+        <strong class="one-line-word">{{card.title}}</strong>
+
+        <p>{{ card.content | textLengthFilter:30 }}</p>
+
+        <div class="meta">来自<a class="author-name">~swenty~</a>的<a class="album-name">Susi | 南笙</a></div>
+        <p class="stats">
+            <span class="recollection">
+                <i title="转藏人数"></i>{{card.recollection}}
+            </span>
+             <span class="like">
+                 <i title="喜欢人数"></i>{{card.like}}
+             </span>
+             <span class="comment">
+                 <i title="评论人数"></i>{{card.comment}}
+             </span>
+        </p>
+    </div>
+</div>

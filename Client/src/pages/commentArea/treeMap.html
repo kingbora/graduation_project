@@ -1,0 +1,34 @@
+<div ng-repeat="data in list" ng-init="showWrapBox=false;commentContent=''">
+    <a class="pull-left thumb-sm">
+        <img ng-src="{{data.portrait}}" class="img-circle">
+    </a>
+    <div class="m-l-xxl m-b">
+        <div class="wrapper-text">
+            <a href><strong>{{data.userName}}</strong></a>
+            <div class="text-muted text-xs block m-t-xs comment-top">
+                <span>{{data.date | timeFilter}}</span>
+                <i class="glyphicon glyphicon-comment replyBtn" ng-click="showWrapBoxMethod(this);"></i>
+            </div>
+        </div>
+        <div class="m-t-sm">{{data.content}}</div>
+        <div class="reply_area">
+            {{data.childNode}}
+            <!--<kng-tree-map list="data.childNode"></kng-tree-map>-->
+        </div>
+    </div>
+    <div class="content-wrap-box" ng-if="showWrapBox">
+        <div class="panel panel-default m-t-md pos-rlt">
+            <form class="wrap-content">
+                <textarea class="form-control no-border content-content" kng-auto-focus="showWrapBox" ng-model="commentContent"></textarea>
+                <span class="reply_placeholder">回复 {{data.userName}} : </span>
+            </form>
+            <div class="panel-footer bg-light lter">
+                <button class="btn btn-info pull-right btn-sm" ng-click="submitComment(data,this)">发&nbsp;&nbsp;表</button>
+                <ul class="nav nav-pills nav-sm">
+                    <li><a href><i class="fa fa-camera text-muted"></i></a></li>
+                    <li><a href><i class="fa fa-video-camera text-muted"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

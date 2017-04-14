@@ -20,7 +20,7 @@
                         <label for="uname">用户名</label>
                         <div class="inputbox" ng-init="isClick=false;isShow=true;">
                             <span class="username" ng-show="!isClick">{{username}}</span>
-                            <input type="text" id="uname" ng-model="usernameNew" maxlength="30" ng-show="isClick">
+                            <input type="text" id="uname" ng-model="usernameNew" maxlength="30" ng-show="isClick" autofocus>
                             <span id="changeUsername" ng-show="isShow" ng-click="isClick=!isClick;isShow=!isShow">修改用户名</span>
                             <div class="changeuser-btns" ng-show="isClick">
                                 <button class="confirm green-btn" id="usernameSubBtn" ng-click="isShow=!isShow;isClick=!isClick;username=usernameNew.length>0?usernameNew:username">确定</button>
@@ -32,11 +32,11 @@
                     <li>
                         <label for="usex">性别</label>
                         <div class="inputbox">
-                                <span class="select-box-sex">
+                                <span class="select-box">
                                     <select id="usex" name="gender" ng-model="usex">
-                                        <option value="" selected="selected">保密</option>
-                                        <option value="男">男</option>
-                                        <option value="女">女</option>
+                                        <option value="2" selected="selected">保密</option>
+                                        <option value="0">男</option>
+                                        <option value="1">女</option>
                                     </select>
                                 </span>
                         </div>
@@ -45,7 +45,8 @@
                         <label for="basArea">个人简介</label>
                         <div class="inputbox">
                             <textarea id="basArea" ng-model="description" placeholder="一句话介绍一下自己吧，让别人更了解你" maxlength="200" name="description"></textarea>
-                            <p class="extra-tips">还可以输入 <span id="tipsNum">200</span> 字</p>
+                            <!--<p class="extra-tips">还可以输入 <span id="tipsNum">200</span> 字</p>-->
+                            <p class="extra-tips">限定可以输入200字</p>
                         </div>
                     </li>
                 </ul>

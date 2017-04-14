@@ -456,10 +456,6 @@ div.pp_pic_holder {
 	left: 50%;
 	margin-top: -40px;
 	margin-left: -60px;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
 	overflow: hidden;
 	z-index:10000;
 }
@@ -702,4 +698,48 @@ a.pp_close {
 	height:2px;
 	background: #00b3ee;
 	border-radius: 2px;
+}
+.file_bar {
+	margin: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 0;
+	height: 0;
+	padding: 0;
+	opacity: 0.8;
+	color: #fff;
+	background: none repeat scroll 0 0 #000000;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	overflow: hidden;
+}
+.file_name {
+	margin: 0;
+	white-space: nowrap;
+	width: 66%;
+	color: #fff;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	float: left;
+}
+.file_del {
+	background: url(../images/delete_white.png) no-repeat scroll 0 0 transparent;
+	width: 18px;
+	height: 18px;
+	display: inline;
+	-moz-user-select: none;
+	position: absolute;
+	right: 3px;
+	margin-top: 4px;
+	cursor: pointer;
+}
+.grid:hover .file_bar {
+	height: 30px;
+}
+.relative {
+	position: relative;
 }

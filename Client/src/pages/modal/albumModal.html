@@ -1,0 +1,60 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">{{modalData.modalTitle}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="bg-auto">
+            <div class="wrapper-md">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label" for="input-id-1">名称：</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" ng-model="albumName"
+                                   id="input-id-1">
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">描述：</label>
+
+                        <div class="col-sm-9">
+                            <textarea maxlength="120" ng-model="albumDescription"
+                                      class="form-control" style="max-width:100%;height: 150px;"></textarea>
+                            <span class="help-block m-b-none">该处主要对相册进行描述，字数限定在120字以内</span>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">风格：</label>
+
+                        <div class="col-sm-9">
+                            <span class="select-box">
+                                <select ng-model="albumStyle" name="account" class="form-control m-b">
+                                    <option value="1">旅游</option>
+                                    <option value="2">亲子</option>
+                                    <option value="3">美食</option>
+                                    <option value="4">人物</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg"></div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">公开：</label>
+
+                        <div class="col-sm-9">
+                            <label class="i-switch i-switch-md bg-info m-t-xs m-r">
+                                <input type="checkbox" checked ng-model="isPublic">
+                                <i></i>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">取消</button>
+        <button type="button" class="btn btn-primary" ng-click="saveAlbum()">保存</button>
+    </div>
+</div>

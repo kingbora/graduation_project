@@ -1,7 +1,7 @@
 /**
  * Created by hand on 2017/3/20.
  */
-var kngAnimateImage = ['$log','$compile','$timeout',function($log,$compile,$timeout){
+var kngAnimateImage = ['$log','$compile','$timeout','$state',function($log,$compile,$timeout,$state){
     return {
         restrict: 'A',
         link: function(scope, element, attrs){
@@ -23,12 +23,15 @@ var kngAnimateImage = ['$log','$compile','$timeout',function($log,$compile,$time
                         }
                     });
                     var elem = $(".pp_pic_holder");
+
                     var elem_width = elem.width();
                     var elem_height = elem.height();
                     elem.css({'width':elem_width,'height':elem_height,'margin-left':-elem_width/2,'margin-top':-elem_height/2});
-                    $log.debug($(".pp_pic_holder").width()+","+$(".pp_pic_holder").height());
+                    $(".pp_check_detail").click(function(){
+                        $("#scrollPhoto").remove();
+                        $state.go('comment');
+                    });
                 });
-                $log.debug("ok2");
             }, 1000);
         }
     }

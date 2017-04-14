@@ -4,11 +4,11 @@
 var registerService = ['$http', function($http) {
     var registerService = {
         registerService: function(param) {
-            var promise = $.post(rootConfig.basePath + '/register',param);
+            var promise = $http.post(rootConfig.basePath + '/user/register',param);
             return promise;
         },
         sendCode: function(param){
-            var promise = $.get(rootConfig.basePath + '/send_code',param);
+            var promise = $http.get(rootConfig.basePath + '/send_code',param);
             return promise;
         }
     };

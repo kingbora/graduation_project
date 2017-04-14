@@ -1,6 +1,6 @@
 .main {
     width: 760px;
-    margin-left: 240px;
+    margin: 20px auto;
     border: 1px solid #e4e4e4;
 }
 .main>h2 {
@@ -87,7 +87,7 @@
     color: #fff;
     opacity: 1;
 }
-.basic form>ul li .inputbox .select-box-sex {
+.select-box {
     display: inline-block;
     position: relative;
     background: url(../images/sel_arrow.png) 104px no-repeat #fff;
@@ -97,11 +97,15 @@
     margin-right: 20px;
     border: 1px solid #e4e4e4;
 }
-.basic form>ul li .inputbox .select-box-sex #usex {
+.select-box select {
     border: 0;
     appearance: none;
     -webkit-appearance: none;
     background: 0 0;
+    -moz-appearance: none;
+    text-indent: 5px;
+    position: relative;
+    bottom: 1px;
 }
 .basic form>ul li .inputbox>textarea {
     width: 590px;
@@ -176,14 +180,9 @@
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
-.basic form>ul li .inputbox .select-box-home .select-home, .basic form>ul li .inputbox .select-box-sex #usex {
+.basic form>ul li .inputbox .select-box-home .select-home, .basic form>ul li .inputbox .select-box #usex {
     width: 130px;
     height: 30px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 5px;
-    position: relative;
-    bottom: 1px;
 }
 .basic form>ul li:last-of-type {
     height: 80px;

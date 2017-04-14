@@ -1,0 +1,13 @@
+<div class="grid relative">
+    <div class="grid-i data-block">
+        <div class="imgholder">
+            <img ng-src="{{card.imgUrl}}"/>
+        </div>
+    </div>
+    <div class="file_bar">
+        <div style="padding:5px;">
+            <p class="file_name">{{card.imgName}}</p>
+            <span class="file_del" data-ng-click="mother.deletePhoto($event,card.id)"></span>
+        </div>
+    </div>
+</div>

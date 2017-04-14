@@ -195,7 +195,7 @@
 .hd-logined {
     width: auto;
 }
-.hd-login a {
+.hd-login > a {
     display: block;
     margin-left: 20px;
     width: 60px;
@@ -207,17 +207,17 @@
     text-align: center;
     cursor: pointer;
 }
-.hd-logined a{
+.hd-logined > a{
     display: inline-block;
     overflow: hidden;
     margin: 15px;
     color: #44b336;
     font-size: 13px;
 }
-.hd-logined a:hover {
+.hd-logined > a:hover {
     opacity: 0.8;
 }
-.hd-logined a img {
+.hd-logined > a img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -294,6 +294,13 @@ section {
     padding-bottom: 10px;
 
 }
+.wrapper-container{
+    position:relative;
+    width:1224px;
+    margin:0 auto 25px;
+    padding-bottom: 10px;
+
+}
 .grid{
     width:188px;
     min-height:100px;
@@ -314,7 +321,7 @@ section {
     padding: 15px;
 }
 .grid .stats {
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     color: #8c7e7e;
 }
 .grid .stats>span {
@@ -452,7 +459,7 @@ section {
     border: 2px solid #fff;
     transition: all 0.3s ease-in-out;
 }
-.grid .imgholder img:hover {
+.grid .imgholder img.imgStyle:hover {
     border: 2px solid #fff;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -480,6 +487,7 @@ p,p a{font-size:12px;color:#666;}
 .hd-banner {
     background: url(../images/banner1.png) no-repeat;
     height: 289px;
+    margin-top: 15px;
     background-size: 100% 100%;
 }
 .hd-banner-show{
@@ -514,7 +522,7 @@ p,p a{font-size:12px;color:#666;}
 }
 .footer {
     width: 100%;
-    background: #fff;
+    background: #f0f0f0;
     color: #333;
     padding: 20px;
 }
@@ -524,4 +532,24 @@ p,p a{font-size:12px;color:#666;}
 }
 .footer p a {
     color: #44b336;
+}
+.one-line-word {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.newAlbumModal .form-control {
+    height: auto;
+}
+.newAlbumModal select {
+    width: 25%;
+}
+.modal-footer {
+    text-align: center;
+}
+.newAlbumModal .modal-footer .btn+.btn {
+    margin-left: 30%;
+}
+.newAlbumModal .btn {
+    padding:6px 57px;
 }

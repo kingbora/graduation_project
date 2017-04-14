@@ -10,6 +10,16 @@ aside, blockquote, body, button, dd, dl, dt, fieldset, figure, footer, form, hea
 :focus {
     outline: 0;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+#global {
+    height: 100%;
+}
+.header-nav {
+    border-bottom: 1px solid #ebebeb;
+}
+
 a:hover,a:active,a:visited,a:focus {
     text-decoration: none;
     outline: 0;
@@ -24,7 +34,7 @@ button, input, optgroup, option, select, textarea {
     font-style: inherit;
     font-weight: inherit;
 }
-.modal-dialog {
+.bs-login-modal-sm .modal-dialog {
     width: 370px;
 }
 .modal-dialog * {
@@ -220,4 +230,67 @@ button, input, optgroup, option, select, textarea {
 }
 .hp-register a {
     color: #44b336;
+}
+.tab-content-container .nav-tabs-alt .nav-tabs.nav-justified > li{
+    display:inline-block;
+    float: left;
+    width: 98px;
+    height: 40px;
+    margin-right: 25px;
+}
+.tab-content-container .nav-tabs.nav-justified {
+    width: 1170px;
+    margin-top: 15px;
+    height: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.tab-content-container .nav-tabs.nav-justified > li >a{
+    display: block;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #7c7c7c;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+.tab-content-container .nav-tabs.nav-justified>.active>a {
+    border: 1px solid #44b336;
+    border-bottom-color: #44b336 !important;
+    color: #44b336;
+}
+.tab-content-container .nav-tabs.nav-justified > li > a:hover {
+    color: #44b336;
+}
+.grid a.author-name {
+    margin-left: 5px;
+    color: #9e7e6b;
+}
+.grid .meta {
+    margin-top: 10px;
+}
+.grid .meta a:hover {
+    text-decoration: underline;
+}
+.grid a.album-name {
+    margin-left: 5px;
+    color: #9e7e6b;
+}
+.confirmModal .modal-sm {
+    width: 400px;
+}
+.confirmModal .modal-content {
+    margin-top: 40%;
+}
+.confirmModal .modal-header {
+    padding: 10px 15px;
+}
+.confirmModal .modal-body {
+    padding: 10px 15px;
+    border-top: 1px solid #e5e5e5;
 }

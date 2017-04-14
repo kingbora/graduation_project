@@ -8,7 +8,7 @@ var kngScrollPhoto = ['$log','$compile',function($log,$compile){
             $(element).on('click', function(){
                 scope.photoId = attrs['kngScrollPhoto'];
                 $.get("pages/mainPage/scrollPhoto.html", function(data){
-                    $("#global").append($compile(data)(scope));
+                    $("body").append($compile(data)(scope));
                     //$('#wrapper').hover(function() {
                     //    $('#navi').stop().animate({
                     //        bottom: 0

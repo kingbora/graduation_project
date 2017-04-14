@@ -1,0 +1,86 @@
+<div class="wrapper-md" ng-controller="userInfoController">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Footable - make HTML tables on smaller devices look awesome
+        </div>
+        <div class="panel-body b-b b-light">
+            Search: <input id="filter" type="text" class="form-control input-sm w-sm inline m-r"/>
+        </div>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        编号
+                    </th>
+                    <th>
+                        用户名
+                    </th>
+                    <th>
+                        手机号
+                    </th>
+                    <th>
+                        密码
+                    </th>
+                    <th>
+                        性别
+                    </th>
+                    <th>
+                        头像
+                    </th>
+                    <th>
+                        创建时间
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="data in dataList">
+                    <td>{{data.userId}}</td>
+                    <td>{{data.userName}}</td>
+                    <td>{{data.phone}}</td>
+                    <td>{{data.password}}</td>
+                    <td>{{data.userSex}}</td>
+                    <td>{{data.portrait}}</td>
+                    <td>{{data.created_at}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        编号
+                    </th>
+                    <th>
+                        父编号
+                    </th>
+                    <th>
+                        内容
+                    </th>
+                    <th>
+                        评论者
+                    </th>
+                    <th>
+                        评论时间
+                    </th>
+                    <th>
+                        评论相册
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="comment in commentList">
+                    <td>{{comment.id}}</td>
+                    <td>{{comment.p_id}}</td>
+                    <td>{{comment.content}}</td>
+                    <td>{{comment.created_by}}</td>
+                    <td>{{comment.created_at}}</td>
+                    <td>{{comment.associate_album}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,8 @@
 <html ng-app="app">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>主页</title>
+    <title>个性相册</title>
+    <link rel="icon" href="images/logo_favicon.ico" type="image/x-icon" />
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" type="text/css" />
     <link href="css/common.css" rel="stylesheet" type="text/css" />
@@ -10,26 +11,26 @@
     <link href="css/personCenter.css" rel="stylesheet" type="text/css" />
     <link href="css/photoWall.css" rel="stylesheet" type="text/css" />
     <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="js/zyUpload/control/css/zyUpload.css" type="text/css">
+    <link href="css/albumManage.css" rel="stylesheet" type="text/css" />
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.min.css" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="js/carouFredSel.js"></script>
-    <script src="js/zyUpload/core/zyFile.js"></script>
-    <!-- 引用控制层插件 -->
-    <script src="js/zyUpload/control/js/zyUpload.js"></script>
-    <!-- 引用初始化JS -->
-    <script src="js/zyUpload/core/lanrenzhijia.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-file-upload/dist/angular-file-upload.js"></script>
+    <script type="text/javascript" src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-deckgrid/angular-deckgrid.js"></script>
     <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
     <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
 </head>
 <body ng-controller="rootController">
     <kng-config-loader root-config="config/clientConfig.json"></kng-config-loader>
     <div id="global" ui-view></div>
+    <toaster-container></toaster-container>
 </body>
 </html>

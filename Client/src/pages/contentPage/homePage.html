@@ -1,0 +1,38 @@
+<div class="tab-content-container" ng-controller="waterFallController">
+    <div class="hd-banner container">
+        <div class="hb-banner-info"></div>
+    </div>
+    <tabset class="nav-tabs-alt" justified="true">
+        <tab href="#">
+            <tab-heading>
+                首页推荐
+            </tab-heading>
+            <div class="wrapper-md animated fadeInUp">
+                <section>
+                    <div deckgrid source="recommendImage" cardTemplate="pages/imageController/cardTemplate.html" class="deckgrid wrapper-container"></div>
+                </section>
+
+            </div>
+        </tab>
+        <tab href="#">
+            <tab-heading>
+                精品分享
+            </tab-heading>
+            <div class="wrapper-md animated fadeInUp">
+                <section>
+                    <div deckgrid source="shareImage" cardTemplate="pages/imageController/cardTemplate.html" class="deckgrid wrapper-container"></div>
+                </section>
+            </div>
+        </tab>
+        <tab href="#">
+            <tab-heading>
+                最新相册
+            </tab-heading>
+            <div class="wrapper-md animated fadeInUp">
+                <section>
+                    <div deckgrid source="newAlbumImage" cardTemplate="pages/imageController/cardTemplate.html" class="deckgrid wrapper-container"></div>
+                </section>
+            </div>
+        </tab>
+    </tabset>
+</div>
